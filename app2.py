@@ -9,8 +9,8 @@ from supabase import create_client, Client
 
 # ==================== Supabase 配置 ====================
 # ⚠️ 请替换为你的 Supabase 项目信息
-SUPABASE_URL = "https://vlkotlfcsuwubrtkaixy.supabase.co"  # 替换这里！
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZsa290bGZjc3V3dWJydGthaXh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTIxOTcsImV4cCI6MjA3NDk4ODE5N30.8YClf-Rc2kcxo2lZIWGGIKmB5vJtfTGQcHO6hkls6Xw"  # 替换这里！
+SUPABASE_URL = st.secrets.get("SUPABASE_URL", "https://vlkotlfcsuwubrtkaixy.supabase.co")
+SUPABASE_KEY = st.secrets.get("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZsa290bGZjc3V3dWJydGthaXh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTIxOTcsImV4cCI6MjA3NDk4ODE5N30.8YClf-Rc2kcxo2lZIWGGIKmB5vJtfTGQcHO6hkls6Xw")
 
 # 初始化 Supabase 客户端
 try:
